@@ -340,60 +340,62 @@
     <h2> Travaux Pratiques & Projets</h2>
     <p class="intro-projets">Réalisations techniques effectuées en environnement virtualisé pour valider mes compétences en administration système et réseau.</p>
 
-    <div class="projects-grid">
-        
-        <div class="project-card">
-            <div class=<i class="fa-solid fa-globe"></i></div>
-            <h3>Serveur Web APACHE</h3>
-            <div class="project-details">
-                <strong>1. Objectif :</strong> Se familiariser avec la configuration du serveur web APACHE à travers différentes directives (VirtualHosts, sécurisation .htaccess).
-                <strong>2. Travaux préparatoires :</strong> Vérification des services en écoute sur une instance Debian et préparation de l'arborescence des sites.
-            </div>
-            <a href="PDF/DOC - APACHE.pdf" target="_blank" class="btn-doc">Consulter le TP</a>
-        </div>
+    <link rel="stylesheet" href="style.css">
 
-        <div class="project-card">
-            <div class=<i class="fa-solid fa-server"></i></div>
-            <h3>Labo DNS (Bind9)</h3>
-            <div class="project-details">
-                <strong>1. Objectif :</strong> Installation et configuration du service DNS pour assurer la résolution de noms au sein d'un domaine local.
-                <strong>2. Travaux préparatoires :</strong> Déploiement d'une machine Debian 12 sans interface graphique, configuration de l'adresse IP statique et mise à jour des dépôts.
-            </div>
-            <a href="PDF/DOC - LABO DNS.pdf" target="_blank" class="btn-doc">Consulter le TP</a>
+<div class="projects-grid">
+    
+    <div class="project-card">
+        <div class="project-icon">🌐</div>
+        <h3>Serveur Web APACHE</h3>
+        <div class="project-details">
+            <strong>1. Objectif :</strong> L'objectif de ce TP est de se familiariser avec la configuration du serveur web APACHE à travers différentes directives.
+            <strong>2. Travaux préparatoires :</strong> Vérification de l'écoute du service sur Debian avec la commande <code>ps -ef | grep apache</code>.
         </div>
-
-        <div class="project-card">
-            <div class=<i class="fa-solid fa-shield-halved"></i></div>
-            <h3>Labo FIREWALL (PfSense)</h3>
-            <div class="project-details">
-                <strong>1. Objectif et contexte :</strong> Prise en main du pare-feu PfSense via la configuration du filtrage et du NAT dans le contexte de la MLIF (mlif.local).
-                <strong>2. Travaux préparatoires :</strong> Mise en place d'une maquette sur VirtualBox incluant un pare-feu, une zone DMZ, un réseau serveur et un réseau client.
-            </div>
-            <a href="PDF/DOC - LABO FIREWALL.pdf" target="_blank" class="btn-doc">Consulter le TP</a>
-        </div>
-
-        <div class="project-card">
-            <div class=<i class="fa-solid fa-list-check"></i></div>
-            <h3>Gestion de Parc GLPI</h3>
-            <div class="project-details">
-                <strong>1. Objectif du projet :</strong> Installer et configurer GLPI sur un serveur Ubuntu pour gérer les équipements, les tickets d'assistance et les ressources logicielles.
-                <strong>2. Travaux préparatoires :</strong> Installation de la pile LAMP (Linux, Apache, MySQL, PHP) et configuration de la base de données SQL.
-            </div>
-            <a href="PDF/TP GLPI (1).pdf" target="_blank" class="btn-doc">Consulter le TP</a>
-        </div>
-
-        <div class="project-card">
-            <div class=<i class="fa-solid fa-layer-group"></i></div>
-            <h3>Labo FAILOVER & LVS</h3>
-            <div class="project-details">
-                <strong>1. Objectif et contexte :</strong> Mettre en œuvre la haute disponibilité (Fail-Over avec Heartbeat) et la répartition de charge (Load-balancing avec LVS).
-                <strong>2. Travaux préparatoires :</strong> Clonage de serveurs web (SRV-WEB et SRV-WEB-BIS) et configuration de l'adresse IP virtuelle (VIP) partagée.
-            </div>
-            <a href="PDF/TP LABOFAILOVER.pdf" target="_blank" class="btn-doc">Consulter le TP</a>
-        </div>
-
+        <a href="DOC - APACHE.pdf" target="_blank" class="btn-doc">Consulter le TP</a>
     </div>
-</section>
+
+    <div class="project-card">
+        <div class="project-icon">🖥️</div>
+        <h3>Labo DNS (Bind9)</h3>
+        <div class="project-details">
+            <strong>1. Objectif :</strong> Installation et configuration du service DNS pour assurer la résolution directe et inverse dans un domaine local.
+            <strong>2. Travaux préparatoires :</strong> Déploiement d'une machine Debian 12 sans interface, configuration IP statique et bridge.
+        </div>
+        <a href="DOC - LABO DNS.pdf" target="_blank" class="btn-doc">Consulter le TP</a>
+    </div>
+
+    <div class="project-card">
+        <div class="project-icon">🛡️</div>
+        <h3>Labo FIREWALL (PfSense)</h3>
+        <div class="project-details">
+            <strong>1. Objectif et contexte :</strong> Le contexte est celui de la MLIF (mlif.local). L’objectif du TP est la prise en main du pare-feu Pfsense à travers la configuration du filtrage et du NAT.
+            <strong>2. Travaux préparatoires :</strong> Montage d'une maquette VirtualBox avec 4 interfaces réseaux (WAN, DMZ, LAN, Client).
+        </div>
+        <a href="DOC - LABO FIREWALL.pdf" target="_blank" class="btn-doc">Consulter le TP</a>
+    </div>
+
+    <div class="project-card">
+        <div class="project-icon">🔄</div>
+        <h3>Labo FAILOVER & LVS</h3>
+        <div class="project-details">
+            <strong>1. Objectif et contexte :</strong> Mettre en œuvre la haute disponibilité de type « Fail-Over » avec le logiciel heartbeat, puis la « Répartition de charge » avec LVS.
+            <strong>2. Travaux préparatoires :</strong> Clonage des serveurs web (SRV-WEB et SRV-WEB-BIS) et configuration des interfaces statiques.
+        </div>
+        <a href="TP LABOFAILOVER.pdf" target="_blank" class="btn-doc">Consulter le TP</a>
+    </div>
+
+    <div class="project-card">
+        <div class="project-icon">📋</div>
+        <h3>Gestion de Parc GLPI</h3>
+        <div class="project-details">
+            <strong>1. Objectif du projet :</strong> Installer et configurer GLPI sur un serveur Ubuntu, au sein d’un environnement virtualisé, pour gérer un parc informatique.
+            <strong>2. Travaux préparatoires :</strong> Installation du serveur Ubuntu Linux, configuration du clavier/réseau et mise en place de la base de données MySQL.
+        </div>
+        <a href="TP GLPI (1).pdf" target="_blank" class="btn-doc">Consulter le TP</a>
+    </div>
+</div>
+
+<script src="script.js"></script>
                
 <section class="section-veille-technologique" id="section-veille-technologique">
     <h2> Veille Technologique</h2>
